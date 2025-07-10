@@ -1,4 +1,4 @@
-# next-file-uploader
+# next-file-master
 
 A comprehensive, production-ready file upload package for Next.js applications with advanced features including authentication, rate limiting, progress tracking, thumbnail generation, and metadata extraction.
 
@@ -23,11 +23,11 @@ A comprehensive, production-ready file upload package for Next.js applications w
 ## 📦 Installation
 
 \`\`\`bash
-npm install next-file-uploader
+npm install next-file-master
 # or
-yarn add next-file-uploader
+yarn add next-file-master
 # or
-pnpm add next-file-uploader
+pnpm add next-file-master
 \`\`\`
 
 ## 🚀 Quick Start
@@ -36,7 +36,7 @@ pnpm add next-file-uploader
 
 \`\`\`typescript
 // pages/api/upload.ts
-import { createUploadHandler, config } from 'next-file-uploader';
+import { createUploadHandler, config } from 'next-file-master';
 
 export default createUploadHandler({
   maxFileSize: 10 * 1024 * 1024, // 10MB
@@ -51,7 +51,7 @@ export { config };
 
 \`\`\`typescript
 // pages/api/upload.ts
-import { createEnhancedUploadHandler, config } from 'next-file-uploader';
+import { createEnhancedUploadHandler, config } from 'next-file-master';
 
 export default createEnhancedUploadHandler({
   maxFileSize: 10 * 1024 * 1024,
@@ -95,7 +95,7 @@ export { config };
 
 \`\`\`typescript
 // pages/api/upload-progress.ts
-import { createProgressHandler } from 'next-file-uploader';
+import { createProgressHandler } from 'next-file-master';
 
 export default createProgressHandler();
 \`\`\`
@@ -835,7 +835,7 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Support
 
-- 📧 Email: support@next-file-uploader.com
-- 🐛 Issues: [GitHub Issues](https://github.com/iskanderovv/next-file-uploader/issues)
-<!-- - 📖 Documentation: [Full Documentation](https://next-file-uploader.com/docs) -->
-- 💬 Discussions: [GitHub Discussions](https://github.com/iskanderovv/next-file-uploader/discussions)
+- 📧 Email: support@next-file-master.com
+- 🐛 Issues: [GitHub Issues](https://github.com/iskanderovv/next-file-master/issues)
+<!-- - 📖 Documentation: [Full Documentation](https://next-file-master.com/docs) -->
+- 💬 Discussions: [GitHub Discussions](https://github.com/iskanderovv/next-file-master/discussions)

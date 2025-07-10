@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.0] - 2024-01-10
 
 ### Added
-- Initial release of next-file-uploader
+- Initial release of next-file-master
 - File upload functionality with WebP conversion
 - PDF upload support
 - CRUD operations (POST, DELETE, PUT)

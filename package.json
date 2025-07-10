@@ -1,10 +1,13 @@
 {
-  "name": "@aii/next-file-uploader",
+  "name": "next-file-master",
   "version": "2.0.0",
   "description": "Production-ready file upload package for Next.js with advanced features: WebP conversion, thumbnails, authentication, rate limiting, progress tracking, and metadata extraction",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist", "README.md"],
+  "publishConfig": {
+  "access": "public"
+},
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -35,12 +38,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iskanderovv/next-file-uploader.git"
+    "url": "https://github.com/iskanderovv/next-file-master.git"
   },
   "bugs": {
-    "url": "https://github.com/iskanderovv/next-file-uploader/issues"
+    "url": "https://github.com/iskanderovv/next-file-master/issues"
   },
-  "homepage": "https://github.com/iskanderovv/next-file-uploader#readme",
+  "homepage": "https://github.com/iskanderovv/next-file-master#readme",
   "peerDependencies": {
     "next": ">=13.0.0"
   },
