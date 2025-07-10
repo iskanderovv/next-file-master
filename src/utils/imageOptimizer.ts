@@ -1,14 +1,9 @@
 import sharp from "sharp"
 import path from "path"
 import { v4 as uuidv4 } from "uuid"
-import type { UploadConfig } from "../types"
+import type { UploadConfig, ImageSizes } from "../types"
+import { getCompleteConfig } from "../config/default"
 import { getLogger } from "./logger"
-
-export interface ImageSizes {
-  thumbnail?: { width: number; height: number }
-  medium?: { width: number; height: number }
-  large?: { width: number; height: number }
-}
 
 export interface OptimizedImages {
   original: string
@@ -20,8 +15,8 @@ export interface OptimizedImages {
 export class ImageOptimizer {
   private config: Required<UploadConfig>
 
-  constructor(config: Required<UploadConfig>) {
-    this.config = config
+  constructor(config: UploadConfig) {
+    this.config = getCompleteConfig(config)
   }
 
   async generateMultipleSizes(inputPath: string, outputDir: string, sizes: ImageSizes = {}): Promise<OptimizedImages> {

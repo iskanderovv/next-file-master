@@ -2,7 +2,7 @@ import sharp from "sharp"
 import path from "path"
 import { v4 as uuidv4 } from "uuid"
 import type { UploadConfig } from "../types"
-import { defaultConfig } from "../config/default"
+import { getCompleteConfig } from "../config/default"
 import { getLogger } from "./logger"
 
 export const processImage = async (
@@ -11,7 +11,7 @@ export const processImage = async (
   config: UploadConfig = {},
 ): Promise<string> => {
   const logger = getLogger()
-  const mergedConfig = { ...defaultConfig, ...config }
+  const mergedConfig = getCompleteConfig(config)
 
   try {
     const filename = `${uuidv4()}.webp`

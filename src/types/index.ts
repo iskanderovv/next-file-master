@@ -79,18 +79,9 @@ export interface UpdateRequest {
   oldFilePath?: string
 }
 
-export interface ProcessedFile {
-  url: string
-  originalName: string
-  size: number
-  mimeType: string
-  hash?: string
-  metadata?: FileMetadata
-  thumbnails?: {
-    thumbnail?: string
-    medium?: string
-    large?: string
-  }
+// Make ProcessedFile extend FileUploadResult to ensure compatibility
+export interface ProcessedFile extends FileUploadResult {
+  // All properties are inherited from FileUploadResult
 }
 
 export interface ValidationResult {

@@ -836,17 +836,6 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 ## 🤝 Support
 
 - 📧 Email: support@next-file-uploader.com
-- 🐛 Issues: [GitHub Issues](https://github.com/your-username/next-file-uploader/issues)
-- 📖 Documentation: [Full Documentation](https://next-file-uploader.com/docs)
-- 💬 Discussions: [GitHub Discussions](https://github.com/your-username/next-file-uploader/discussions)
-
-## 🎯 Roadmap
-
-- [ ] Cloud storage integration (AWS S3, Cloudinary, Google Cloud)
-- [ ] Video processing and thumbnail generation
-- [ ] File compression and archive support
-- [ ] Webhook notifications
-- [ ] Database integration for metadata storage
-- [ ] Virus scanning integration
-- [ ] File versioning system
-- [ ] Bulk operations API
+- 🐛 Issues: [GitHub Issues](https://github.com/iskanderovv/next-file-uploader/issues)
+<!-- - 📖 Documentation: [Full Documentation](https://next-file-uploader.com/docs) -->
+- 💬 Discussions: [GitHub Discussions](https://github.com/iskanderovv/next-file-uploader/discussions)

@@ -1,8 +1,8 @@
 import type { ValidationResult, UploadConfig } from "../types"
-import { defaultConfig } from "../config/default"
+import { getCompleteConfig } from "../config/default"
 
 export const validateFile = (file: any, config: UploadConfig = {}): ValidationResult => {
-  const mergedConfig = { ...defaultConfig, ...config }
+  const mergedConfig = getCompleteConfig(config)
 
   // Check file size
   if (file.size > mergedConfig.maxFileSize) {
@@ -34,7 +34,7 @@ export const sanitizeFilename = (filename: string): string => {
 }
 
 export const isImageFile = (mimeType: string, config: UploadConfig = {}): boolean => {
-  const mergedConfig = { ...defaultConfig, ...config }
+  const mergedConfig = getCompleteConfig(config)
   return mergedConfig.supportedImageTypes.includes(mimeType)
 }
 

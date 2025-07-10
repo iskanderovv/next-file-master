@@ -3,7 +3,7 @@ import type { NextApiRequest } from "next"
 import path from "path"
 import { v4 as uuidv4 } from "uuid"
 import type { UploadConfig, ProcessedFile } from "../types"
-import { defaultConfig } from "../config/default"
+import { getCompleteConfig } from "../config/default"
 import { ensureDirectoryExists, deleteFile, fileExists } from "../utils/fileSystem"
 import { validateFile, sanitizeFilename, isImageFile, isPdfFile } from "../utils/validation"
 import { ImageOptimizer } from "../utils/imageOptimizer"
@@ -22,7 +22,7 @@ export class EnhancedFileHandler {
   private rateLimiter?: RateLimiter
 
   constructor(config: UploadConfig = {}) {
-    this.config = { ...defaultConfig, ...config } as Required<UploadConfig>
+    this.config = getCompleteConfig(config)
     this.imageOptimizer = new ImageOptimizer(this.config)
     this.metadataExtractor = new MetadataExtractor()
     this.progressTracker = ProgressTracker.getInstance()
@@ -154,7 +154,7 @@ export class EnhancedFileHandler {
       url: finalUrl,
       originalName: sanitizedName,
       size: file.size,
-      mimeType: "image/webp",
+      type: "image/webp",
     }
 
     if (Object.keys(thumbnails).length > 0) {
@@ -192,7 +192,7 @@ export class EnhancedFileHandler {
       url: finalUrl,
       originalName: sanitizedName,
       size: file.size,
-      mimeType: file.mimetype,
+      type: file.mimetype,
     }
 
     // Extract metadata if enabled

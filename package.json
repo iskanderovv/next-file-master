@@ -1,5 +1,5 @@
 {
-  "name": "next-file-uploader",
+  "name": "@aii/next-file-uploader",
   "version": "2.0.0",
   "description": "Production-ready file upload package for Next.js with advanced features: WebP conversion, thumbnails, authentication, rate limiting, progress tracking, and metadata extraction",
   "main": "dist/index.js",
