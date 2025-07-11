@@ -1,6 +1,6 @@
 {
   "name": "next-file-master",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Production-ready file upload package for Next.js with advanced features: WebP conversion, thumbnails, authentication, rate limiting, progress tracking, and metadata extraction",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
