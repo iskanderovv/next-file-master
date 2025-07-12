@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "formidable": "^3.5.1",
-    "sharp": "^0.33.2",
+    "sharp": "^0.34.3",
     "uuid": "^9.0.1",
     "winston": "^3.11.0"
   },
